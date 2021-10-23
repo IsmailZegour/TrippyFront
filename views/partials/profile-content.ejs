@@ -1,0 +1,10 @@
+<% if(profile.user[0].travels) { profile.user[0].travels.forEach(travel => {%>
+    <%- include('travel-tile', {travel: travel}) %>
+<% })}%>
+<% if(profile.user[0].posts) {  %>
+    <div class="posts-grid">
+        <% profile.user[0].posts.forEach(post => { %>
+            <%- include('post-tile', {post: post}) %>
+        <% }) %>
+    </div>
+<%}%>

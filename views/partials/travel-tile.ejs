@@ -1,0 +1,15 @@
+<div class="d-flex flex-column mt-3 travel-tile p-2">
+    <div class="mb-2">
+        <img src="<%= process.env.CORE_APP_URL+':'+process.env.CORE_APP_PORT+'/pictures/travels/'+travel.picture %>">
+    </div>
+    <div class="container-fluid">
+        <div class="d-flex flex-column">
+            <div class="d-flex">
+                <h5 style="font-weight: 900;" class="col-6"><%= travel.name %></h5>
+                <a class="d-flex flex-column col-2 text-center" href="#"><i class="bi bi-grid-3x3 font-color d-flex justify-content-center"></i><span class="accent-text"><%= travel.postsCount %></span></a>
+                <a class="d-flex flex-column col-2 text-center" href="#"><i class="bi bi-geo-alt d-flex justify-content-center"></i><span class="accent-text"><%= travel.destinationsCount %></span></a>
+                <a class="d-flex flex-column col-2 text-center" href="#"><i class="bi bi-list-check font-color d-flex justify-content-center"></i><span class="accent-text"><%= travel.activitiesCount %></span></a>
+            </div>
+        </div>
+    </div>
+</div>

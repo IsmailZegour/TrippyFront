@@ -1,0 +1,50 @@
+<div class="container-fluid" style="height: 100vh;">
+    <div class="h-100 d-flex container-fluid align-items-center">
+        <div class="d-flex flex-fill d-none d-md-block">
+            <div class="d-flex justify-content-center">
+                <div class="d-flex flex-column">
+                    <h1 class="fw-bold">Welcome back !</br>Sign in to continue</h1>
+                    <p>If you don't have an account </br>You can <a style="cursor: pointer;" href="/access/register" id="registerBtn"><strong class="theme-font-color">Register here!</strong></a></p>
+                </div>
+            </div>
+        </div>
+        <div class="d-flex flex-column justify-content-center flex-fill">
+            <h3>Sign In</h3>
+            <form id="loginForm">
+                <div class="mb-3">
+                    <!--<label for="login_email_input">Email address</label>-->
+                    <div class="form-floating">
+                        <input required name="mail" type="email" class="form-control" style="background-color: var(--input-bg-color); border: none; border-radius: 1em;" id="login_email_input" placeholder="name@example.com">
+                        <label for="login_email_input">Email address</label>
+                    </div>
+                  </div>
+                  <div class="mb-3">
+                    <!--<label for="login_password_input">Password</label>-->
+                    <div class="form-floating">
+                        <input required name="password" type="password" class="form-control" style="background-color: var(--input-bg-color); border: none; border-radius: 1em;" id="login_password_input" placeholder="Password">
+                        <label for="login_password_input">Password</label>
+                    </div>
+                  </div>
+                  <div id="err_msg" class="text-danger">
+                  </div>
+                  <div class="d-flex justify-content-center mb-3">
+                    <button class="colorful-btn" id="loginSubmitBtn" type="submit">Sign In</button>
+                  </div>
+            </form>
+            <div class="d-sm-flex d-md-none mb-3">
+                <p>You are new ? </br><a style="cursor: pointer;" href="/access/register" id="registerBtn"><strong class="theme-font-color">Register here!</strong></a></p>
+            </div>
+            <div class="d-flex justify-content-center mb-5">
+                <div class="col align-self-center"><div class="ui-line accent-element"></div></div>
+                <div class="col text-center"><p style="transform: translateY(25%);" class="accent-text">or continue with</p></div>
+                <div class="col align-self-center"><div class="ui-line accent-element"></div></div>
+            </div>
+            <div class="d-flex">
+                <div class="col text-center"><a href="#" class="accent-border font-color" style="padding: 1em 2em; border-radius: 15px;"><i class="fab fa-google"></i></a></div>
+                <div class="col text-center"><a href="#" class="accent-border font-color" style="padding: 1em 2em; border-radius: 15px;"><i class="fab fa-facebook-f"></i></a></div>
+                <div class="col text-center"><a href="#" class="accent-border font-color" style="padding: 1em 2em; border-radius: 15px;"><i class="fab fa-twitter"></i></a></div>
+                <div class="col text-center"><a href="#" class="accent-border font-color" style="padding: 1em 2em; border-radius: 15px;"><i class="fab fa-apple"></i></a></div>
+            </div>
+        </div>
+    </div>
+</div>

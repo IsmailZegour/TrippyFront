@@ -1,0 +1,42 @@
+<div class="container-fluid" style="padding-top: 60px; padding-bottom: 60px;">
+    <form id="add-travel-form" enctype="multipart/form-data">
+        <div class="mb-3">
+            <label for="travelPicture" class="form-label">Add a picture of your trip</label>
+            <input  class="form-control" accept="image/*" type="file" id="travelPicture" name="picture">
+        </div>
+        <div class="travel-tile mb-3">
+            <img id="Picture" src=""/>
+        </div>
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="nameInput"><i class="bi bi-bookmark-heart"></i></span>
+            <input required type="text" class="form-control" placeholder="Name your trip!" aria-label="name" aria-describedby="nameInput" name='name'>
+        </div>
+        <div class="row g-3 mb-3">
+            <div class="col">
+                <div class="input-group date">
+                    <input required name="starting_date" placeholder="Start of the trip" type="text" data-provide="datepicker" class="form-control"><span class="input-group-text"><i class="bi bi-calendar-check"></i></span>
+                </div>
+            </div>
+            <div class="col">
+                <div class="input-group date">
+                    <input required name="ending_date" placeholder="End of the trip" type="text" data-provide="datepicker" class="form-control"><span class="input-group-text"><i class="bi bi-calendar-check"></i></span>
+                </div>
+            </div>
+        </div>
+        <div class="mb-3">
+            <label for="description" class="form-label"> <i class="bi bi-blockquote-left"></i> Tell us about your trip !</label>
+            <textarea name="description" class="form-control" id="description" rows="8"></textarea>
+        </div>
+        <div class="d-flex justify-content-center align-items-center">
+            <button class="colorful-btn px-2 py-1 d-flex align-items-center" type="submit" style="line-height: 16px; box-shadow: 0px 10px 15px rgba(68, 97, 242, 0.4);"><i class="bi bi-check-circle"></i><span class="ms-1">Add</span></button>
+        </div>
+    </form>
+</div>
+<script>
+    document.getElementById('travelPicture').onchange = event => {
+        const [file] = document.getElementById('travelPicture').files;
+        if(file) {
+            document.getElementById('Picture').src = URL.createObjectURL(file);
+        }
+    }
+</script>
